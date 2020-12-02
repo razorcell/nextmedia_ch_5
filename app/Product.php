@@ -15,4 +15,9 @@ class Product extends Model
     {
         $this->attributes['name'] = $value;
     }
+    public function getUrlAttribute()
+    {
+        return route("products.show", $this->id);
+    }
+
 }
